@@ -4,8 +4,6 @@ This is my Barista FullStack application. It allows user to input an order and a
 &emsp;
 <img src="https://github.com/BrianMelaraDev/Barista-FullStack/blob/main/Barista.gif" width="700">
 
-
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Click Here to go to the website!](https://game-of-thronesapi.herokuapp.com/)
 ## How Its Made 
 **Languages used:** Html, CSS, Javascript, Node.js , MongoDB , Express, Mongoose
 # What I Learned
