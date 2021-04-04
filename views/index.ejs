@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+  	<meta charset="utf-8">
+  	<meta name="description" content="Your description goes here">
+  	<meta name="keywords" content="one, two, three">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="https://kit.fontawesome.com/aa1a2a1c33.js" crossorigin="anonymous"></script>
+
+		<title>Blank Template</title>
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div class='login'>
+			<a href="/login" class="login"><i class="fas fa-sign-in-alt"></i>Log in</a>
+			<% if(loggedIn) { %>
+				<a href="/logout" class="login"><i class="fas fa-sign-in-alt"></i>Log out</a>
+			<% } %>
+			<h1>May I take your order?</h1>
+		</div>
+		<div>
+			
+			<form class="orders" action="/orders" method="post">
+				<input type="text" name="order" placeholder="order">
+				<input type="text" name="name" placeholder="name">
+				<button type="submit" name="button">Submit</button>
+			</form>
+		</div>
+			<main>
+			<section class="currentOrders">
+				<ul>
+					<% uncompletedOrders.filter(order => !order.completed).forEach((order) => {%>
+						<li class="order">
+							<% if(loggedIn) { %>
+								<i class="far fa-check-circle complete-button" data-id="<%= order._id %>"></i>
+							<% } %>
+							<%= order.order %> for <%= order.name %>
+						</li>
+					<% }) %>
+				</ul>
+			</section>
+
+			<section class="completeOrders">
+				<ul>
+					<% completedOrders.filter(order => order.completed).forEach((order) => {%>
+						<li class="order">
+							<% if(loggedIn) { %>
+								<i class="far fa-trash-alt delete-button" data-id="<%= order._id %>"></i>
+							<% } %>
+							<%= order.order %> for <%= order.name %>
+						</li>
+					<% }) %>
+				</ul>
+			</section>
+		</main>
+
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
