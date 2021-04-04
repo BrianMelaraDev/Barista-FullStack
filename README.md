@@ -2,7 +2,8 @@
 This is my Barista FullStack application. It allows user to input an order and attach a name to that order. Then the Barista can login and coomplete the orders which will move to the completed section. Then they may choose to delete orders as they complete. I am saving the users data into my database in MongoDB and using the module Mongoose in Node.js I was able to include some CRUD functionality by saving the users data and updating the list as it goes.
  
 &emsp;
-<img src="https://github.com/DashlinS/ShokumotsuCafe/blob/main/public/gif/Barista.gif" width="700">
+<img src="https://github.com/BrianMelaraDev/Barista-FullStack/blob/main/Barista.gif" width="700">
+
 
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[Click Here to go to the website!](https://game-of-thronesapi.herokuapp.com/)
 ## How Its Made 
